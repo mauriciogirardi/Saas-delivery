@@ -1,0 +1,35 @@
+.header {
+  background-color: var(--background-secondary);
+  padding: 2rem 1.2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--title-primary);
+  line-height: 2.2rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--title-secondary);
+}
+
+.wrapper__search {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-input);
+  height: 2.5rem;
+  width: 100%;
+  margin-top: 1.8rem;
+  border: 1px solid var(--background-input);
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.input__search {
+  flex: 1;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
