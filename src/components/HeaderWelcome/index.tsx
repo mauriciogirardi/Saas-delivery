@@ -1,7 +1,7 @@
 import { KeyboardEvent, useState } from 'react'
 import { MagnifyingGlass } from 'phosphor-react'
 
-import styles from './HeaderWelcome.module.css'
+import * as S from './styles'
 
 interface HeaderWelcomeProps {
   mainColor: string
@@ -28,23 +28,19 @@ export const HeaderWelcome = ({ mainColor, onSearch }: HeaderWelcomeProps) => {
   }
 
   return (
-    <header className={styles.header}>
+    <S.Header>
       <div>
-        <h1 className={styles.title}>Seja Bem-Vindo(a) 👋</h1>
-        <span className={styles.subtitle}>Oque deseja pra hoje?</span>
+        <S.Title>Seja Bem-Vindo(a) 👋</S.Title>
+        <S.SubTitle>Oque deseja pra hoje?</S.SubTitle>
       </div>
 
-      <div
-        className={styles.wrapper__search}
-        style={{ borderColor: focused ? mainColor : '#fff' }}
-      >
+      <S.Wrapper focused={focused} mainColor={mainColor}>
         <MagnifyingGlass
           onClick={() => onSearch(searchValue)}
           color={mainColor}
           size={20}
         />
-        <input
-          className={styles.input__search}
+        <S.InputSearch
           type="search"
           placeholder="Digite o nome do seu produto"
           onFocus={handleFocus}
@@ -53,7 +49,7 @@ export const HeaderWelcome = ({ mainColor, onSearch }: HeaderWelcomeProps) => {
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
         />
-      </div>
-    </header>
+      </S.Wrapper>
+    </S.Header>
   )
 }

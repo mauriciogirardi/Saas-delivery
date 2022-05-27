@@ -1,11 +1,11 @@
 import Image from 'next/image'
 
-import styles from './CardProduct.module.css'
+import * as S from './styles'
 
 export const Banner = () => {
   return (
-    <div className={styles.container}>
+    <S.Container>
       <h1>Card</h1>
-    </div>
+    </S.Container>
   )
 }

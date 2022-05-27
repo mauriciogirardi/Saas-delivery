@@ -2,8 +2,9 @@ import type { NextPage } from 'next'
 
 import { Banner } from '../../components/Banner'
 import { HeaderWelcome } from '../../components/HeaderWelcome'
+import { MenuMobile } from '../../components/Menu/Mobile'
 
-import styles from '../../styles/Home.module.css'
+import * as S from '../../styles/HomeStyles'
 
 const Home: NextPage = () => {
   const handleSearch = (value: string) => {
@@ -11,13 +12,17 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div className={styles.container}>
-      <HeaderWelcome mainColor="#FB9400" onSearch={handleSearch} />
+    <S.Wrapper>
+      <S.Container>
+        <HeaderWelcome mainColor="#FB9400" onSearch={handleSearch} />
 
-      <div className={styles.content}>
-        <Banner />
-      </div>
-    </div>
+        <S.ContentBanner>
+          <Banner />
+        </S.ContentBanner>
+      </S.Container>
+
+      <MenuMobile />
+    </S.Wrapper>
   )
 }
 

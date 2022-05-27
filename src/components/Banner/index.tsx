@@ -1,10 +1,10 @@
 import Image from 'next/image'
 
-import styles from './Banner.module.css'
+import * as S from './styles'
 
 export const Banner = () => {
   return (
-    <div className={styles.container}>
+    <S.Container>
       <Image
         src={'/assets/images/banner_promocao.png'}
         alt="é um banner de promoção com a imagem de um hamburger"
@@ -12,6 +12,6 @@ export const Banner = () => {
         height={190}
         objectFit="cover"
       />
-    </div>
+    </S.Container>
   )
 }
