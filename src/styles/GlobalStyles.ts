@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle`
   :root {
     --background-primary: #ffffff;
     --background-secondary: #f9f9fb;
-    --title-primary: #2c2c2c;
+    --title-primary: #1B1B1B;
     --title-secondary: #979797;
     --background-input: #ffffff;
     --orange-primary: #FB9400;

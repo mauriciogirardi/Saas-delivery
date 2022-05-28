@@ -8,16 +8,25 @@ export const Container = styled.section`
 `
 
 export const ContentBanner = styled.div`
-  padding: 1.5rem 1.2rem;
+  padding: 1rem 1.2rem;
   display: flex;
   gap: 1rem;
-
-  @media screen and (max-width: 540px) {
-    flex-wrap: wrap;
-  }
 `
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
+`
+
+export const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem 0;
+
+  @media screen and (max-width: 540px) {
+    grid-template-columns: repeat(2, 1fr);
+    height: 400px;
+    overflow-y: auto;
+  }
 `

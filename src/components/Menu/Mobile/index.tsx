@@ -38,7 +38,7 @@ export const MenuMobile = () => {
         </S.Li>
 
         <S.Li>
-          <Link href="/my-order">
+          <Link href="/order">
             <S.Wrapper>
               <span className="icon">
                 <Scroll size={28} />

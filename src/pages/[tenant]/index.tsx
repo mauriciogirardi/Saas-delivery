@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 
 import { Banner } from '../../components/Banner'
+import { CardProduct } from '../../components/CardProduct'
 import { HeaderWelcome } from '../../components/HeaderWelcome'
 import { MenuMobile } from '../../components/Menu/Mobile'
 
@@ -19,6 +20,15 @@ const Home: NextPage = () => {
         <S.ContentBanner>
           <Banner />
         </S.ContentBanner>
+
+        <S.Grid>
+          <CardProduct />
+          <CardProduct />
+          <CardProduct />
+          <CardProduct />
+          <CardProduct />
+          <CardProduct />
+        </S.Grid>
       </S.Container>
 
       <MenuMobile />
