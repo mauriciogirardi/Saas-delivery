@@ -4,11 +4,15 @@ export const Container = styled.footer`
   position: relative;
   width: 100%;
   height: 60px;
-  background: var(--orange-secondary);
+  background: ${p => p.theme.colors.orangeSecondary};
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px 10px 0 0;
+
+  @media screen and (min-width: 560px) {
+    margin-top: 3rem;
+  }
 `
 
 export const Ul = styled.ul`
@@ -33,7 +37,7 @@ export const Wrapper = styled.div`
   width: 100%;
 
   .active {
-    background-color: var(--orange-primary);
+    background-color: ${p => p.theme.colors.orangePrimary};
     transform: translateY(-25px);
     svg {
       color: #fff;
@@ -49,6 +53,6 @@ export const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    color: var(--orange-primary);
+    color: ${p => p.theme.colors.orangePrimary};
   }
 `

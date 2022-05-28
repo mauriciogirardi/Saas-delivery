@@ -5,17 +5,19 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 178px;
+  width: 100%;
   height: 178px;
   border-radius: 8px;
   box-shadow: 4px 7px 26px -6px rgba(0, 0, 0, 0.31);
   padding: 0.6rem;
   position: relative;
-  z-index: 10;
+  z-index: 0;
 
   img {
     z-index: 10;
-    width: 100%;
+    width: 90px;
+    height: 90px;
+    object-fit:cover ;
   }
 `
 
@@ -28,20 +30,20 @@ export const Category = styled.span`
 export const Title = styled.h2`
   font-weight: 700;
   font-size: 1.2rem;
-  color: var(--title-primary);
+  color: ${p => p.theme.colors.titlePrimary};
 `
 
 export const Price = styled.p`
   font-weight: 600;
   font-size: 1rem;
-  color: var(--orange-primary);
+  color:${p => p.theme.colors.orangePrimary};
 `
 export const Background = styled.div`
   position: absolute;
   top: 0;
   width: 100%;
   height: 80px;
-  background-color: var(--orange-secondary);
+  background-color: ${p => p.theme.colors.orangeSecondary};
   border-radius: 8px 8px 0 0;
   z-index: 1;
 `

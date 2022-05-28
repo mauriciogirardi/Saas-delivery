@@ -1,16 +1,11 @@
-import Image from 'next/image'
-
 import * as S from './styles'
 
 export const CardProduct = () => {
   return (
     <S.Container>
-      <Image
+      <img
         src={'/assets/images/golden_burger.png'}
         alt="Imagem de um hamburger tradicional golder buger com o valor de R$25,50"
-        width={119}
-        height={119}
-        objectFit="contain"
       />
 
       <div>

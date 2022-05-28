@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Head from 'next/head'
 
 import { Banner } from '../../components/Banner'
 import { CardProduct } from '../../components/CardProduct'
@@ -7,32 +8,45 @@ import { MenuMobile } from '../../components/Menu/Mobile'
 
 import * as S from '../../styles/HomeStyles'
 
-const Home: NextPage = () => {
+interface HomeProps {
+  hasPromotion?: boolean
+}
+
+const Home: NextPage = ({ hasPromotion = true }: HomeProps) => {
   const handleSearch = (value: string) => {
     console.log(value)
   }
 
   return (
-    <S.Wrapper>
-      <S.Container>
-        <HeaderWelcome mainColor="#FB9400" onSearch={handleSearch} />
+    <>
+      <Head>
+        <title>Cardápio</title>
+      </Head>
 
-        <S.ContentBanner>
-          <Banner />
-        </S.ContentBanner>
+      <S.Wrapper>
+        <S.Container>
+          <HeaderWelcome mainColor="#FB9400" onSearch={handleSearch} />
 
-        <S.Grid>
-          <CardProduct />
-          <CardProduct />
-          <CardProduct />
-          <CardProduct />
-          <CardProduct />
-          <CardProduct />
-        </S.Grid>
-      </S.Container>
+          {hasPromotion && (
+            <S.ContentBanner>
+              <Banner />
+            </S.ContentBanner>
+          )}
 
-      <MenuMobile />
-    </S.Wrapper>
+          <S.Grid hasPromotion={hasPromotion}>
+            <CardProduct />
+            <CardProduct />
+            <CardProduct />
+            <CardProduct />
+            <CardProduct />
+            <CardProduct />
+            <CardProduct />
+          </S.Grid>
+        </S.Container>
+
+        <MenuMobile />
+      </S.Wrapper>
+    </>
   )
 }
 
