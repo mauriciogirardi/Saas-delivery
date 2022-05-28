@@ -8,18 +8,19 @@ export const Container = styled.div`
   width: 178px;
   height: 178px;
   border-radius: 8px;
-  box-shadow: 4px 7px 26px -6px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 7px 26px -6px rgba(0, 0, 0, 0.31);
   padding: 0.6rem;
   position: relative;
   z-index: 10;
 
   img {
     z-index: 10;
+    width: 100%;
   }
 `
 
 export const Category = styled.span`
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 500;
   margin-top: 0.5rem;
 `
